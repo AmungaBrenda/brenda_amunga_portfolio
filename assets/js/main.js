@@ -252,3 +252,34 @@
 		}
 
 })(jQuery);
+
+
+
+// Function to initialize skill bars animation
+function initSkillBars() {
+	// Select all progress bars
+	const progressBars = document.querySelectorAll('.progress-bar');
+	
+	// Create an Intersection Observer
+	const observer = new IntersectionObserver((entries) => {
+	  entries.forEach(entry => {
+		// If the progress bar is in view
+		if (entry.isIntersecting) {
+		  // Get the width from data attribute
+		  const width = entry.target.getAttribute('data-width');
+		  // Set the width to animate the bar
+		  entry.target.style.width = width;
+		  // Unobserve after animation
+		  observer.unobserve(entry.target);
+		}
+	  });
+	}, { threshold: 0.2 });
+	
+	// Observe each progress bar
+	progressBars.forEach(bar => {
+	  observer.observe(bar);
+	});
+  }
+  
+  // Initialize when DOM is fully loaded
+  document.addEventListener('DOMContentLoaded', initSkillBars);

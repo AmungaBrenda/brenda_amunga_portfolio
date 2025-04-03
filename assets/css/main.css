@@ -1,11 +1,7 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Merriweather:300,700,300italic,700italic|Source+Sans+Pro:900");
 
-/*
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -3604,7 +3600,10 @@ input, select, textarea {
 		}
 
 /* Nav */
-
+    
+#nav {
+    transition: background-color 0.3s ease;
+} 
 	#nav {
 		color: #ffffff;
 		display: -moz-flex;
@@ -4685,3 +4684,299 @@ input, select, textarea {
 		}
 
 	}
+
+
+	
+/* Skills Section Styling */
+
+/* Technical Skills */
+.technical-skills {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 2rem;
+	margin-bottom: 3rem;
+  }
+  
+  .skill-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 120px;
+	text-align: center;
+	transition: transform 0.3s ease;
+  }
+  
+  .skill-item:hover {
+	transform: translateY(-10px);
+  }
+  
+  .skill-item i {
+	font-size: 3rem;
+	margin-bottom: 0.5rem;
+  }
+  
+  /* Icon specific colors */
+  .fa-python {
+	color: #306998;
+  }
+  
+  .fa-database {
+	color: #00758F;
+  }
+  
+  .fa-html5 {
+	color: #E34F26;
+  }
+  
+  .fa-css3-alt {
+	color: #264de4;
+  }
+  
+  .fa-js {
+	color: #F7DF1E;
+  }
+  
+  .fa-git-alt {
+	color: #F05032;
+  }
+  
+  .fa-chart-bar {
+	color: #E97627;
+  }
+  /* Additional icon styles for PostgreSQL and Excel */
+.fa-elephant {
+	color: #336791; /* PostgreSQL color */
+  }
+  
+  .fa-file-excel {
+	color: #217346; /* Excel green color */
+  }
+
+  /*Postgres Alternative */
+  
+  .postgresql-icon {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  .postgresql-icon:before {
+	content: "PG";
+	position: absolute;
+	font-size: 0.8rem;
+	font-weight: bold;
+	color: white;
+  }
+  
+  .postgresql-icon i {
+	color: #336791; /* PostgreSQL blue color */
+  }
+
+
+  /* Professional Skills */
+  .professional-skills {
+	max-width: 800px;
+	margin: 0 auto;
+  }
+  
+  .prof-skill {
+	margin-bottom: 1.5rem;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+  }
+  
+  .prof-skill p {
+	width: 180px;
+	margin: 0;
+	font-weight: bold;
+  }
+  
+  .progress-container {
+	flex: 1;
+	background-color: rgba(255, 255, 255, 0.1);
+	height: 10px;
+	border-radius: 5px;
+	overflow: hidden;
+	margin: 0 15px;
+  }
+  
+  .progress-bar {
+	height: 100%;
+	background: linear-gradient(to left, #314b2a, #b8b357, #e45656);
+	border-radius: 5px;
+	position: relative;
+	width: 0;
+	transition: width 1.5s ease-in-out;
+  }
+  
+  .prof-skill span {
+	width: 50px;
+	text-align: right;
+  }
+  
+  /* Animation for Progress Bars */
+  @keyframes fillProgress {
+	from { width: 0; }
+	to { width: 100%; }
+  }
+  
+  /* For mobile responsiveness */
+  @media screen and (max-width: 736px) {
+	.prof-skill {
+	  flex-direction: column;
+	  align-items: flex-start;
+	}
+	
+	.prof-skill p {
+	  width: 100%;
+	  margin-bottom: 0.5rem;
+	}
+	
+	.progress-container {
+	  width: 80%;
+	  margin: 0 0 0.5rem 0;
+	}
+	
+	.prof-skill span {
+	  width: auto;
+	}
+  }	
+
+
+
+  .education-timeline {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.education-item {
+	padding: 20px;
+	margin-bottom: 20px;
+	background: rgba(255, 255, 255, 0.05);
+	border-radius: 8px;
+	position: relative;
+	transition: transform 0.3s ease;
+}
+
+.education-item:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.education-item h3 {
+	margin: 0 0 5px 0;
+	color: #18bfef;
+}
+
+.education-item .date {
+	font-style: italic;
+	opacity: 0.7;
+	margin-bottom: 5px;
+}
+
+.education-item .degree {
+	font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 736px) {
+	.education-timeline {
+		padding: 10px;
+	}
+	
+	.education-item {
+		padding: 15px;
+	}
+}  
+
+  /* Video container styling */
+  .video-container {
+	margin-bottom: 40px;
+	text-align: center;
+}
+
+.video-container video {
+	max-width: 100%;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+	border-radius: 8px;
+}
+
+/* Education timeline styling */
+.education-timeline {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.education-item {
+	display: flex;
+	padding: 20px;
+	margin-bottom: 20px;
+	background: rgba(255, 255, 255, 0.05);
+	border-radius: 8px;
+	position: relative;
+	transition: transform 0.3s ease;
+	align-items: center;
+}
+
+.education-item:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.education-logo {
+	flex: 0 0 80px;
+	margin-right: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.education-logo img {
+	max-width: 80px;
+	max-height: 80px;
+	border-radius: 50%;
+	background: #fff;
+	padding: 5px;
+}
+
+.education-content {
+	flex: 1;
+}
+
+.education-content h3 {
+	margin: 0 0 5px 0;
+	color: #18bfef;
+}
+
+.education-content .date {
+	font-style: italic;
+	opacity: 0.7;
+	margin-bottom: 5px;
+}
+
+.education-content .degree {
+	font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 736px) {
+	.education-timeline {
+		padding: 10px;
+	}
+	
+	.education-item {
+		padding: 15px;
+		flex-direction: column;
+		text-align: center;
+	}
+	
+	.education-logo {
+		margin-right: 0;
+		margin-bottom: 15px;
+	}
+}
